@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Churrasco</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="shortcut icon" href="assets/churras.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <div>
+
+    <h1>
+      Calculadora de churrasco
+    </h1>
+    <div class="bloco" id="pessoas">
+      <img style="float: right;" src="assets/pessoas.png" width="50px">
+      <h3>Quantidade de Pessoas</h3>
+      <form id="pessoas">
+        <table>
+          <tr>
+            <th><label>Adultos: </label></th>
+            <th><input type="number" min="0" id="adultos"></th>
+          </tr>
+          <tr>
+            <th><label>Crianças: </label></th>
+            <th><input type="number" min="0" id="criancas"></th>
+          </tr>
+          <tr>
+            <button class="orange" type="reset">Limpar</button>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div class="bloco" id="carnes">
+      <img style="float: right;" src="assets/carnes.png" width="50px">
+      <h3>Carnes</h3>
+      <form id="carnes">
+        <div class="bloco-carne">
+          <table>
+            <h4>Carnes Bovinas</h4>
+            <tr>
+              <th> <label>Picanha</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Picanha"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Alcatra</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Alcatra"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Contra-filé</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Contra-filé"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Cupim</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Cupim"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Fraldinha</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Fraldinha">
+              </th>
+            </tr>
+          </table>
+        </div>
+
+        <div class="bloco-carne">
+          <table>
+            <h4>Carnes de Frango</h4>
+            <tr>
+              <th> <label>Coração de frango</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Coração de frango"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Asinha de frango</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Asinha de frango"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Coxa de frango</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Coxa de frango">
+              </th>
+            </tr>
+          </table>
+        </div>
+
+        <div class="bloco-carne">
+          <table>
+            <h4>Linguiças</h4>
+            <tr>
+              <th> <label>Linguiça de frango</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Linguiça de frango"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Linguiça toscana</label>
+              </th>
+              <th> <input type="checkbox" name="carne" value="Linguiça toscana">
+              </th>
+            </tr>
+            <tr><button class="orange" type="reset">Limpar</button></tr>
+          </table>
+        </div>
+      </form>
+    </div>
+
+    <div class="bloco" id="guarnicoes">
+      <img style="float: right;" src="assets/guarnicoes.png" width="50px">
+      <h3>Guarnições</h3>
+      <div>
+        <form id="guarnicoes">
+          <table>
+            <tr>
+              <th> <label>Quijo coalho (5 un.)</label>
+              </th>
+              <th> <input type="checkbox" name="guarnicao" value="Queijo Coalho"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Pão de alho (5 un.)</label>
+              </th>
+              <th> <input type="checkbox" name="guarnicao" value="Pão de Alho"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Cebola assada</label>
+              </th>
+              <th> <input type="checkbox" name="guarnicao" value="Cebola"><br>
+              </th>
+            </tr>
+            <tr>
+              <th> <label>Melancia grelhada</label>
+              </th>
+              <th> <input type="checkbox" name="guarnicao" value="Melancia"><br>
+              </th>
+            </tr>
+            <tr>
+              <button class="orange" type="reset">Limpar</button>
+            </tr>
+          </table>
+        </form>
+        <br>
+        <div class="botao">
+          <button class="red" type="submit" onclick="mostrarResultados();">Calcular!</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="bloco" id="final" style="display: none;">
+      <img style="float: right;" src="assets/churras.png" width="50px">
+      <div id="result"></div>
+      <div id="result-carnes"></div>
+      <div id="result-guarnicoes"></div>
+    </div>
+
+  </div>
+</body>
+
+</html>
